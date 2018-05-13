@@ -1,0 +1,6 @@
+'use strict';
+
+var movielist = [{ title: 'Mean Girls' }, { title: 'Hackers' }, { title: 'The Grey' }, { title: 'Sunshine' }, { title: 'Ex Machina' }];
+
+window.movielist = movielist;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL2RhdGEvbW92aWVsaXN0LmpzIl0sIm5hbWVzIjpbIm1vdmllbGlzdCIsInRpdGxlIiwid2luZG93Il0sIm1hcHBpbmdzIjoiOztBQUFBLElBQUtBLFlBQVksQ0FDYixFQUFDQyxPQUFPLFlBQVIsRUFEYSxFQUViLEVBQUNBLE9BQU8sU0FBUixFQUZhLEVBR2IsRUFBQ0EsT0FBTyxVQUFSLEVBSGEsRUFJYixFQUFDQSxPQUFPLFVBQVIsRUFKYSxFQUtiLEVBQUNBLE9BQU8sWUFBUixFQUxhLENBQWpCOztBQVFFQyxPQUFPRixTQUFQLEdBQW1CQSxTQUFuQiIsImZpbGUiOiJtb3ZpZWxpc3QuanMiLCJzb3VyY2VzQ29udGVudCI6WyJ2YXIgIG1vdmllbGlzdCA9IFtcbiAgICB7dGl0bGU6ICdNZWFuIEdpcmxzJ30sXG4gICAge3RpdGxlOiAnSGFja2Vycyd9LFxuICAgIHt0aXRsZTogJ1RoZSBHcmV5J30sXG4gICAge3RpdGxlOiAnU3Vuc2hpbmUnfSxcbiAgICB7dGl0bGU6ICdFeCBNYWNoaW5hJ30sXG4gIF07XG5cbiAgd2luZG93Lm1vdmllbGlzdCA9IG1vdmllbGlzdDtcbiJdfQ==

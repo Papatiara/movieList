@@ -1,0 +1,20 @@
+#app{
+    display: block;
+    width: 75%;
+    margin: auto;
+  }
+
+.h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  display:block;
+}
+
+.display-movie{
+    display:block;
+    font-size: 20px;
+    border-style: dotted;
+    padding: 5px;
+    margin: 10px auto;
+    overflow: auto;
+    width: 50%
+}
