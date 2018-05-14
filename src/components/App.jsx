@@ -24,7 +24,12 @@ class App extends React.Component {
       });
     }
 }
-  
+  addMovie(query) {
+    var obj = {}
+    obj.title = query
+  this.state.movies.push(obj)
+  }
+
   render() {
     return (
       <div>
@@ -38,6 +43,11 @@ class App extends React.Component {
           <div className="col-md-7">
             <DisplayMovie movie={this.state.displayedMovies} />
           </div>
+          <div className="row">
+          <div className="col-md-7">
+            <Add movies={this.state.displayedMovies} addFunc={this.addMovie.bind(this)}/>
+          </div>
+        </div>
         </div>
       </div>
     );

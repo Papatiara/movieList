@@ -11,14 +11,13 @@ class SearchMovie extends React.Component {
     }
 
     button(actualState) {
-        console.log(actualState)
         this.props.searchFunc(actualState);
     };
     
     noSubmit(event) {
       event.preventDefault();
     }
-    
+
     render() {
       return (
         <div className="search">
