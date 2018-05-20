@@ -13,7 +13,7 @@ class App extends React.Component {
     if (query === '') {
       this.setState({
       displayedMovies: this.state.movies
-      })
+    })
     } else {
       var pattern = new RegExp(query, 'i');
       var filtered = _.filter(this.state.movies ,function(data) {
@@ -22,14 +22,17 @@ class App extends React.Component {
       this.setState({
         displayedMovies: filtered
       });
+    } if (this.state.displayedMovies.length === 0) {
+      this.setState({
+        displayedMovies: [{title:'No Movies Found =('}],
+      });
     }
 }
   addMovie(query) {
     var obj = {}
     obj.title = query
-  this.state.movies.push(obj)
-  }
-
+    this.state.movies.push(obj)
+    }
   render() {
     return (
       <div>
@@ -39,13 +42,19 @@ class App extends React.Component {
           <SearchMovie movies={this.state.displayedMovies} searchFunc={this.search.bind(this)}/>
           </div>
         </nav>
+        <button> Watched </button>
+        <button> Never Watched </button>
         <div className="row">
           <div className="col-md-7">
+          <div> 
             <DisplayMovie movie={this.state.displayedMovies} />
+            </div>
           </div>
           <div className="row">
           <div className="col-md-7">
-            <Add movies={this.state.displayedMovies} addFunc={this.addMovie.bind(this)}/>
+          <div>
+            <Add  movies={this.state.displayedMovies} addFunc={this.addMovie.bind(this)}/>
+            </div>
           </div>
         </div>
         </div>

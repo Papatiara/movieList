@@ -11,11 +11,20 @@
 }
 
 .display-movie{
-    display:block;
+    /* display: grid;
     font-size: 20px;
     border-style: dotted;
     padding: 5px;
     margin: 10px auto;
-    overflow: auto;
-    width: 50%
+    /* overflow: auto; */
+    width: 50% 
+}
+.title{
+  display: grid;
+  font-size: 20px;
+  border-style: dotted;
+  padding: 5px;
+  margin: 10px auto;
+  /* overflow: auto; */
+  width: 50%
 }

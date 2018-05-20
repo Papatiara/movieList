@@ -1,18 +1,21 @@
-var DisplayMovie = (props) => {
-  if (props.movie.length === 0) {
-    return (
-      <h3 className="noMovies">No movies found :(</h3>
-    );
-  } else {
-    return (
-      <div className="display-movie">
-       {props.movie.map((movie, index) => {
-         return <Movie movie={movie} key={index} />
-   })}
-   </div>
+class DisplayMovie extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      foundedMovie: {movie: 'No movies found'}
+    }
+  }
+
+render() {
+  return (
+    <div>
+    <h3 className="noMovies"></h3> 
+    {this.props.movie.map((movie, index) =>
+    <Movie movie={movie} key={index} /> )}
+    </div>
   )
-  } 
-};
+}
+}
 
 DisplayMovie.propTypes = {
   movie: React.PropTypes.array.isRequired
