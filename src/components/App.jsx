@@ -4,7 +4,9 @@ class App extends React.Component {
     
     this.state = {
       movies:  window.movielist,
-      displayedMovies: [],
+      displayedMovies: window.movielist,
+      store: [],
+      movieStatus: 'To watch'
     };
   }
 
@@ -22,17 +24,29 @@ class App extends React.Component {
       this.setState({
         displayedMovies: filtered
       });
-    } if (this.state.displayedMovies.length === 0) {
-      this.setState({
-        displayedMovies: [{title:'No Movies Found =('}],
-      });
-    }
+    } 
 }
   addMovie(query) {
     var obj = {}
     obj.title = query
     this.state.movies.push(obj)
     }
+
+    watched() {
+      console.log(this.state.movieStatus)
+      if (this.state.movieStatus === 'To watch') {
+        this.setState({movieStatus: 'Watched'})
+      } else {
+        this.setState({movieStatus: 'To watch'})
+      }
+      // if (this.state.movieStatus === 'Watched') {
+      //     this.state.store.push(this.props.movie)
+      //     console.log(this.state.store)
+      // }
+    }
+
+
+
   render() {
     return (
       <div>
@@ -42,12 +56,16 @@ class App extends React.Component {
           <SearchMovie movies={this.state.displayedMovies} searchFunc={this.search.bind(this)}/>
           </div>
         </nav>
-        <button> Watched </button>
-        <button> Never Watched </button>
+      <div>
+      <button> Watched </button>
+      <button> To watch </button>
+      </div>
         <div className="row">
           <div className="col-md-7">
           <div> 
-            <DisplayMovie movie={this.state.displayedMovies} />
+          {this.state.displayedMovies.map((movie, index) =>
+               <Movie movie={movie} key={index} funcMovie={this.watched.bind(this)} status={this.state.movieStatus}/> )}
+            {/* <Movie movie={this.state.displayedMovies} /> */}
             </div>
           </div>
           <div className="row">

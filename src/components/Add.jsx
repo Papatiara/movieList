@@ -7,7 +7,6 @@ class Add extends React.Component {
 }
 
 getMovie(valueAdded) {
-  console.log(valueAdded)
   this.setState({addValue: valueAdded})
 }
 

@@ -2,7 +2,7 @@ class DisplayMovie extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      foundedMovie: {movie: 'No movies found'}
+      foundedMovie: this.props.status
     }
   }
 
